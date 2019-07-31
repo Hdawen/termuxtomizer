@@ -3,7 +3,7 @@
 ## What's this?  
 A set of customized Termux configuration, which includes zsh-autouggestions, zsh-completions, zsh-syntax-highlighting, powerlevel9k, powerline font and modified solarized color scheme.  
 Please run termux-configuration/runme.sh to install.  
-While zsh shows up, please run "exit" to continue installation process.  
+While zsh shows up, please execute "exit" to continue installation process.  
 After installation is over, restart Termux to take effect.  
 Former Termux configuration stores in ~/.termuxbak.
 
