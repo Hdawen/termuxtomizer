@@ -1,5 +1,4 @@
 #!/bin/bash
-mv ~/.termux ~/.termuxbak
 cp -r .termux ~
 cp .hushlogin ~
 pkg install zsh wget neofetch
