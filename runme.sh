@@ -23,7 +23,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/p
 git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 cp $dir/.zshrc ~
-if $input == [Aa]
+if [ $input = [Aa] ]
 then
   echo "ZSH_THEME=\"powerlevel9k/powerlevel9k\"" >> ~/.zshrc
 else
