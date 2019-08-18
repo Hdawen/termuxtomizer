@@ -24,4 +24,4 @@ while true; do
     * ) echo "Invalid input... Try again.";;
   esac
 done
-echo "Done. Restart session to take effects."
+echo "Done. Restart session to take effect."
