@@ -2,8 +2,8 @@
 
 while getopts ":r" opt; do
     case $opt in
-        r ) rm -rf ~/oh-my-zsh ~/.hushlogin ~/.zshrc ~/.termux; pkg remove zsh neofetch;;
-        \? ) echo "Usage: runme.sh [-r]"
+        r ) rm -rf ~/oh-my-zsh ~/.hushlogin ~/.zshrc ~/.termux; pkg remove zsh neofetch; exit;;
+        \? ) echo "Usage: runme.sh [-r]"; exit;;
     esac
 done
 
