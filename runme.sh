@@ -17,7 +17,7 @@ git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugi
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 cp $dir/.zshrc ~
 while true; do
-  read -p "Would you like to have neofetch on startup? [Y/n] " input
+  read -p "Would you like to have neofetch on startup (which may highly delay the start process)? [Y/n]\n" input
   case $input in
     [Yy] ) pkg install neofetch; echo "neofetch" >> ~/.zshrc; break;;
     [Nn] ) break;;
