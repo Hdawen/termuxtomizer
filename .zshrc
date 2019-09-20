@@ -95,3 +95,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_text dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs history)
+POWERLEVEL9K_CUSTOM_TEXT_BACKGROUND=000
+POWERLEVEL9K_CUSTOM_TEXT_FOREGROUND=003
