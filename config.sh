@@ -19,7 +19,7 @@ cp $dir/.zshrc ~
 read -p "Please enter custom text (eg. device name): " text
 echo "POWERLEVEL9K_CUSTOM_TEXT=\"echo $text\"" >> ~/.zshrc
 while true; do
-	read -p "Would you like to have neofetch on startup (which may highly delay the start process)? [Y/n] " neo
+	read -p "Would you like to run neofetch on startup (which may highly delay the start process)? [Y/n] " neo
 	case $neo in
 		[Yy] ) apt install neofetch; echo "neofetch" >> ~/.zshrc; break;;
 		[Nn] ) break;;
