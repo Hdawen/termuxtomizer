@@ -137,17 +137,18 @@ if [ $theme == 1 ]; then
 	git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 	sed -i "s/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"powerlevel9k\/powerlevel9k\"/g" $rc
 
-	echo ""
-	echo "Enable more icon display?"
-	echo ""
-	read -p "Choice [Y/n]: " icon
+#Debugging
+#	echo ""
+#	echo "Enable more icon display?"
+#	echo ""
+#	read -p "Choice [Y/n]: " icon
 
-	while true; do
-		case $icon in
-			Y*|y*|"") echo "POWERLEVEL9K_MODE=\"nerdfont-complete\"" >> $rc ; break;;
-			N*|n*) break;;
-		esac
-	done
+#	while true; do
+#		case $icon in
+#			Y*|y*|"") echo "POWERLEVEL9K_MODE=\"nerdfont-complete\"" >> $rc ; break;;
+#			N*|n*) break;;
+#		esac
+#	done
 
 	echo ""
 	echo "Enable double-lined prompt?"
@@ -202,7 +203,7 @@ echo "Default is Solarized Dark."
 while true; do
 	read -p "Choice [1-$i]: " palette
 	case $palette in
-		[1-${#array[@]}) pallete=$[$pallete-1]; cp $dir/base16-termux/colors/base16-${array[$palette]}-256.properties ~/.termux/colors.properties; break;;
+		[1-$i]) pallete=$[$pallete-1]; cp $dir/base16-termux/colors/base16-${array[$palette]}-256.properties ~/.termux/colors.properties; break;;
 		"") echo "Using default value."; sleep 1; cp $dir/base16-termux/colors/base16-solarized-dark-256.properties ~/.termux/colors.properties; break;;
 	esac
 done
