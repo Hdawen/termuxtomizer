@@ -14,6 +14,7 @@
 ## Installation
 ```bash
 curl -sLO https://raw.github.com/mechtifs/termuxtomizer/master/config.sh
+chmod +x config
 ./config.sh
 ```
 
@@ -23,6 +24,7 @@ curl -sLO https://raw.github.com/mechtifs/termuxtomizer/master/config.sh
 ```
 
 ## Tips
+It is necessary to run `./config.sh -r` before reinstalling.
 If you prefer Powerlevel10k, select "No" when the setup wizard asks you to change the font.
 
 ## Todos

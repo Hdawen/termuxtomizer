@@ -7,6 +7,8 @@ while getopts ":r" opt; do
 			pkg remove zsh neofetch
 			rm -rf ~/.oh-my-zsh ~/.hushlogin ~/.zshrc ~/.termux ~/.p10k.zsh
 			chsh -s bash
+			echo ""
+			echo "Done. Restart session to take effect."
 			exit
 			;;
 		\?)
@@ -25,7 +27,7 @@ mkdir ~/.termux
 echo "extra-keys = [['ESC','/','-','HOME','UP','END','PGUP'],['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN']]" > ~/.termux/termux.properties
 
 
-#Dependencies
+#Zsh
 pkg install git zsh
 chsh -s zsh
 sh -c $(sed -e "/exec zsh -l/d" <<< $(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh))
@@ -56,32 +58,31 @@ echo "11) Fira Code"
 echo "12) Go Mono"
 echo "13) Hack Mono"
 echo "14) Heavy Data"
-echo "15) IBM Plex Mono"
-echo "16) Inconsolata"
-echo "17) Inconsolata Go"
-echo "18) Inconsolata LGC"
-echo "19) Iosevka"
-echo "20) JetBrains Mono"
-echo "21) Lekton"
-echo "22) Liberation Mono"
-echo "23) Monofur"
-echo "24) Monoid"
-echo "25) Mononoki"
-echo "26) Noto"
-echo "27) ProggyClean"
-echo "28) Roboto Mono"
-echo "29) Share Tech Mono"
-echo "30) Space Mono"
-echo "31) Terminus"
-echo "32) Tinos"
-echo "33) Ubuntu"
-echo "34) Ubuntu Mono"
+echo "15) iA Writer Mono"
+echo "16) IBM Plex Mono"
+echo "17) Inconsolata"
+echo "18) Inconsolata Go"
+echo "19) Inconsolata LGC"
+echo "20) Iosevka"
+echo "21) JetBrains Mono"
+echo "22) Lekton"
+echo "23) Liberation Mono"
+echo "24) Monofur"
+echo "25) Monoid"
+echo "26) Mononoki"
+echo "27) Noto"
+echo "28) ProggyClean"
+echo "29) Roboto Mono"
+echo "30) Share Tech Mono"
+echo "31) Space Mono"
+echo "32) Terminus"
+echo "33) Tinos"
+echo "34) Ubuntu"
 echo "35) Victor Mono"
-echo "36) iA Writer Mono"
 echo ""
 echo "Default is Noto."
 while true; do
-	read -p "Choice [1-36]: " font
+	read -p "Choice [1-35]: " font
 	case $font in
 		1)
 			curl -L $url/Agave/complete/agave%20regular%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
@@ -140,79 +141,79 @@ while true; do
 			break
 			;;
 		15)
-			curl -L $url/IBMPlexMono/Mono/complete/Blex%20Mono%20Text%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
+			curl -L $url/iA-Writer/iA%20Writer%20Mono/Regular/complete/iM%20Writing%20Mono%20S%20Regular%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
 			break
 			;;
 		16)
-			curl -L $url/Inconsolata/complete/Inconsolata%20Regular%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
+			curl -L $url/IBMPlexMono/Mono/complete/Blex%20Mono%20Text%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
 			break
 			;;
 		17)
-			curl -L $url/InconsolataGo/Regular/complete/InconsolataGo%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
+			curl -L $url/Inconsolata/complete/Inconsolata%20Regular%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
 			break
 			;;
 		18)
-			curl -L $url/InconsolataLGC/Regular/complete/Inconsolata%20LGC%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
+			curl -L $url/InconsolataGo/Regular/complete/InconsolataGo%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
 			break
 			;;
 		19)
-			curl -L $url/Iosevka/Regular/complete/Iosevka%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
+			curl -L $url/InconsolataLGC/Regular/complete/Inconsolata%20LGC%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
 			break
 			;;
 		20)
-			curl -L $url/JetBrainsMono/Regular/complete/JetBrains%20Mono%20Regular%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
+			curl -L $url/Iosevka/Regular/complete/Iosevka%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
 			break
 			;;
 		21)
-			curl -L $url/Lekton/Regular/complete/Lekton%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
+			curl -L $url/JetBrainsMono/Regular/complete/JetBrains%20Mono%20Regular%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
 			break
 			;;
 		22)
-			curl -L $url/LiberationMono/complete/Literation%20Mono%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
+			curl -L $url/Lekton/Regular/complete/Lekton%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
 			break
 			;;
 		23)
-			curl -L $url/Monofur/Regular/complete/monofur%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
+			curl -L $url/LiberationMono/complete/Literation%20Mono%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
 			break
 			;;
 		24)
-			curl -L $url/Monoid/Regular/complete/Monoid%20Regular%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
+			curl -L $url/Monofur/Regular/complete/monofur%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
 			break
 			;;
 		25)
-			curl -L $url/Mononoki/Regular/complete/mononoki-Regular%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
+			curl -L $url/Monoid/Regular/complete/Monoid%20Regular%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
 			break
 			;;
 		26)
-			curl -L $url/Noto/Mono/complete/Noto%20Mono%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
+			curl -L $url/Mononoki/Regular/complete/mononoki-Regular%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
 			break
 			;;
 		27)
-			curl -L $url/ProggyClean/Regular/complete/ProggyCleanTT%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
+			curl -L $url/Noto/Mono/complete/Noto%20Mono%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
 			break
 			;;
 		28)
-			curl -L $url/RobotoMono/Regular/complete/Roboto%20Mono%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
+			curl -L $url/ProggyClean/Regular/complete/ProggyCleanTT%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
 			break
 			;;
 		29)
-			curl -L $url/ShareTechMono/complete/Shure%20Tech%20Mono%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
+			curl -L $url/RobotoMono/Regular/complete/Roboto%20Mono%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
 			break
 			;;
 		30)
-			curl -L $url/SpaceMono/Regular/complete/Space%20Mono%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
+			curl -L $url/ShareTechMono/complete/Shure%20Tech%20Mono%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
 			break
 			;;
 		31)
-			curl -L $url/Terminus/terminus-ttf-4.40.1/Regular/complete/Terminess%20%28TTF%29%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
+			curl -L $url/SpaceMono/Regular/complete/Space%20Mono%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
 			break
 			;;
 		32)
-			curl -L $url/Tinos/Regular/complete/Tinos%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
+			curl -L $url/Terminus/terminus-ttf-4.40.1/Regular/complete/Terminess%20%28TTF%29%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
 			break
 			;;
 		33)
-			curl -L $url/Ubuntu/Regular/complete/Ubuntu%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
+			curl -L $url/Tinos/Regular/complete/Tinos%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
 			break
 			;;
 		34)
@@ -221,10 +222,6 @@ while true; do
 			;;
 		35)
 			curl -L $url/VictorMono/Regular/complete/Victor%20Mono%20Regular%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
-			break
-			;;
-		36)
-			curl -L $url/iA-Writer/iA%20Writer%20Mono/Regular/complete/iM%20Writing%20Mono%20S%20Regular%20Nerd%20Font%20Complete%20Mono.ttf -o ~/.termux/font.ttf
 			break
 			;;
 		"")
