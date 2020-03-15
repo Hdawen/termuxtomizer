@@ -13,12 +13,12 @@
 
 ## Installation
 ```bash
-sh -c "$(curl -fsSL https://raw.github.com/mechtifs/termuxtomizer/config.sh)"
+sh -c "$(curl -fsSL https://raw.github.com/mechtifs/termuxtomizer/master/config.sh)"
 ```
 
 ## Uninstallation
 ```bash
-sh -c "$(curl -fsSL https://raw.github.com/mechtifs/termuxtomizer/config.sh)" -r
+sh -c "$(curl -fsSL https://raw.github.com/mechtifs/termuxtomizer/master/config.sh)" -r
 ```
 
 ## Tips
