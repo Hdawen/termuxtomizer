@@ -24,8 +24,8 @@ chmod +x config
 ```
 
 ## Tips
-It is necessary to run `./config.sh -r` before reinstalling.
-If you prefer Powerlevel10k, select "No" when the setup wizard asks you to change the font.
+- It is necessary to run `./config.sh -r` before reinstalling.
+- If you prefer Powerlevel10k, select "No" when the setup wizard asks you to change the font.
 
 ## Todos
 - Add Chinese Readme
