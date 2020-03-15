@@ -18,7 +18,7 @@ sh -c "$(curl -fsSL https://raw.github.com/mechtifs/termuxtomizer/config.sh)"
 
 ## Uninstallation
 ```bash
-./termuxtomizer/config.sh -r
+sh -c "$(curl -fsSL https://raw.github.com/mechtifs/termuxtomizer/config.sh)" -r
 ```
 
 ## Tips
