@@ -13,7 +13,7 @@
 
 ## Installation
 ```bash
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.github.com/mechtifs/termuxtomizer/config.sh)"
 ```
 
 ## Uninstallation
@@ -27,7 +27,8 @@ If you prefer Powerlevel10k, select "No" when the setup wizard asks you to chang
 ## Todos
 - Add Chinese Readme
 - Add Chinese script prompts
-- Optimize the script 
+- Optimize the script
+- Colored output
 
 ## Links
 [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)  
