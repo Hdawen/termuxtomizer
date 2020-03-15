@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #Options
 while getopts ":r" opt; do
@@ -21,6 +21,7 @@ done
 dir=$(cd "$(dirname "$0")"; pwd)
 rc=~/.zshrc
 touch ~/.hushlogin
+mkdir ~/.termux
 echo "extra-keys = [['ESC','/','-','HOME','UP','END','PGUP'],['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN']]" > ~/.termux/termux.properties
 
 
@@ -245,7 +246,8 @@ echo "2) Powerlevel10k"
 echo ""
 echo "Default is Powerlevel10k."
 
-while true; do
+while true
+do
 	read -p "Choice [1-2]: " theme
 	case $theme in
 		[12])
@@ -260,7 +262,7 @@ while true; do
 	esac
 done
 
-if [ $theme == 1 ]
+if [ $theme -eq 1 ]
 then
 	git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 	sed -i "s/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"powerlevel9k\/powerlevel9k\"/g" $rc
