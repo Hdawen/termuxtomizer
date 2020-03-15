@@ -1,7 +1,7 @@
 # TermuXtomizer - Termux Customizer
 
 ## Freatures
-- Z Shell
+- Z shell
 - Oh My Zsh
 - Plugins (auto-suggestions, completions, syntax-highlighting)
 - Powerlevel9k or Powerlevel10k
@@ -13,12 +13,13 @@
 
 ## Installation
 ```bash
-bash -c "$(curl -fsSL https://raw.github.com/mechtifs/termuxtomizer/master/config.sh)"
+curl -sLO https://raw.github.com/mechtifs/termuxtomizer/master/config.sh
+./config.sh
 ```
 
 ## Uninstallation
 ```bash
-bash -c "$(curl -fsSL https://raw.github.com/mechtifs/termuxtomizer/master/config.sh) -r"
+./config.sh -r
 ```
 
 ## Tips

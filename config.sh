@@ -28,9 +28,7 @@ echo "extra-keys = [['ESC','/','-','HOME','UP','END','PGUP'],['TAB','CTRL','ALT'
 #Dependencies
 pkg install git zsh
 chsh -s zsh
-curl -L https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -o $dir/ohmyz.sh
-sed -i "/exec zsh -l/d" $dir/ohmyz.sh
-sh $dir/ohmyz.sh
+sh -c $(sed -e "/exec zsh -l/d" <<< $(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh))
    
 
 #Plugins
