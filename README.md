@@ -14,7 +14,7 @@
 ## Installation
 ```bash
 curl -sLO https://raw.github.com/mechtifs/termuxtomizer/master/config.sh
-chmod +x config
+chmod +x config.sh
 ./config.sh
 ```
 
