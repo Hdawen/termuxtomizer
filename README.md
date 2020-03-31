@@ -4,7 +4,7 @@
 - Z shell
 - Oh My Zsh
 - Plugins (auto suggestions, completions, syntax highlighting)
-- Powerlevel9k or Powerlevel10k
+- Powerlevel10k
 - Up to 35 fonts
 - Up to 136 custom color schemes
 - Double-lined hot keys
