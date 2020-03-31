@@ -3,33 +3,31 @@
 ## Freatures
 - Z shell
 - Oh My Zsh
-- Plugins (auto-suggestions, completions, syntax-highlighting)
+- Plugins (auto suggestions, completions, syntax highlighting)
 - Powerlevel9k or Powerlevel10k
-- Additional customizations for Powerlevel9k
-- Up to 36 fonts
-- Up to 136 custom color palettes
-- Double-line hot keys
+- Up to 35 fonts
+- Up to 136 custom color schemes
+- Double-lined hot keys
 - Neofetch on startup (Optional)
 
-## Installation
+## Install
 ```bash
-curl -sLO https://raw.github.com/mechtifs/termuxtomizer/master/config.sh
+curl -OL https://raw.github.com/mechtifs/termuxtomizer/master/config.sh
 chmod +x config.sh
 ./config.sh
 ```
 
-## Uninstallation
+## Uninstall
 ```bash
 ./config.sh -r
 ```
 
 ## Tips
-- It is necessary to run `./config.sh -r` before reinstalling.
-- If you prefer Powerlevel10k, select "No" when the setup wizard asks you to change the font.
+- **Run `./config.sh -r` before reinstalling is required.**
+- Select **"no"** when Powerlevel10k asks you to change the font.
+- "Neofetch on startup" may highly affect the startup process, so by default it's not enabled. However, you could try "instant prompt" featured in Powerlevel10k to gain a better experience with "neofetch on startup" enabled.
 
 ## Todos
-- Add Chinese Readme
-- Add Chinese script prompts
 - Optimize the script
 - Colored output
 

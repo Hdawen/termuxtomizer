@@ -4,7 +4,7 @@
 while getopts ":r" opt; do
 	case $opt in
 		r)
-			pkg remove zsh neofetch
+			pkg remove zsh
 			rm -rf ~/.oh-my-zsh ~/.hushlogin ~/.zshrc ~/.termux ~/.p10k.zsh
 			chsh -s bash
 			echo ""
@@ -37,6 +37,8 @@ sh -c "$(sed -e "/exec zsh -l/d" <<< $(curl -fsSL https://raw.github.com/ohmyzsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
+sed -i "s/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"powerlevel10k\/powerlevel10k\"/g" $rc
 sed -i "s/plugins=(git)/plugins=(git zsh-autosuggestions zsh-completions zsh-syntax-highlighting)/g" $rc
 
 
@@ -233,90 +235,12 @@ while true; do
 done
 
 
-#Themes
-echo ""
-echo "Pick a theme."
-echo "1) Powerlevel9k"
-echo "2) Powerlevel10k"
-echo ""
-echo "Default is Powerlevel10k."
-
-while true
-do
-	read -p "Choice [1-2]: " theme
-	case $theme in
-		[12])
-			break
-			;;
-		"")
-			echo "Using default value."
-			theme="2"
-			sleep 1
-			break
-			;;
-	esac
-done
-
-if [ $theme -eq 1 ]
-then
-	git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-	sed -i "s/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"powerlevel9k\/powerlevel9k\"/g" $rc
-
-	echo ""
-	echo "Enable double-line prompt?"
-	echo ""
-	read -p "Choice [Y/n]: " dual
-
-	while true
-	do
-		case $dual in
-			Y* | y* | "")
-				echo "POWERLEVEL9K_PROMPT_ON_NEWLINE=true" >> $rc
-				echo "POWERLEVEL9K_RPROMPT_ON_NEWLINE=true" >> $rc
-				break
-				;;
-			N* | n*)
-				break
-				;;
-		esac
-	done
-
-	echo ""
-	echo "Hide the right prompt?"
-	echo ""
-	read -p "Choice [Y/n]: " prompt
-
-	while true
-	do
-		case $prompt in
-			Y* | y*)
-				echo "POWERLEVEL9K_DISABLE_RPROMPT=true" >> $rc
-				break
-				;;
-			N* | n* | "")
-				break
-				;;
-		esac
-	done
-
-	echo ""
-	read -p "Enter the custom text (eg. device name): " text
-	echo "POWERLEVEL9K_CUSTOM_TEXT=\"echo $text\"" >> $rc
-	echo "POWERLEVEL9K_CUSTOM_TEXT_BACKGROUND=000" >> $rc
-	echo "POWERLEVEL9K_CUSTOM_TEXT_FOREGROUND=003" >> $rc
-	echo "POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_text dir vcs)" >> $rc
-else
-	git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
-	sed -i "s/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"powerlevel10k\/powerlevel10k\"/g" $rc
-fi
-
-
-#Palettes
+#Color Schemes
 git clone https://github.com/kdrag0n/base16-termux.git $dir/base16-termux
 targets=$(grep -o -P "(?<=6-).*?(?=-2)" <<< $(ls $dir/base16-termux/colors))
 array=($targets)
 echo ""
-echo "Pick a color palette."
+echo "Pick a color scheme."
 
 for ((i=0; i<${#array[@]}; i++))
 do
@@ -328,17 +252,17 @@ echo "Default is Solarized Dark."
 
 while true
 do
-	read -p "Choice [1-$i]: " palette
-	if [ -z "$palette" ]
+	read -p "Choice [1-$i]: " color
+	if [ -z "$color" ]
 	then
 		echo "Using default value."
 		sleep 1
 		cp $dir/base16-termux/colors/base16-solarized-dark-256.properties ~/.termux/colors.properties
 		break
-	elif [ $palette -ge 1 ] && [ $palette -le $i ]
+	elif [ $color -ge 1 ] && [ $color -le $i ]
 	then
-		palette=$[ $palette - 1 ]
-		cp $dir/base16-termux/colors/base16-${array[$palette]}-256.properties ~/.termux/colors.properties
+		color=$[ $color - 1 ]
+		cp $dir/base16-termux/colors/base16-${array[$color]}-256.properties ~/.termux/colors.properties
 		break
 	fi
 done
