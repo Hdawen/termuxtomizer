@@ -1,5 +1,7 @@
 # TermuXtomizer - Termux Customizer
 
+_Due to my schoolwork, this repo will not be actively updated for months._
+
 ## Freatures
 - Z shell
 - Oh My Zsh
